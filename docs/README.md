@@ -1,0 +1,1 @@
+This directory is for correction of document files.

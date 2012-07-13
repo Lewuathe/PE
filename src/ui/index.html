@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Physical simulator</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <script type="x-shader/x-vertex" id="shader-vs"></script>
+  <script type="x-shader/x-fragment" id="shader-fs"></script>
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/UI.js"></script>
+
+  <script type="text/javascirpt">
+    $(function(){
+        var canvas = $("#canvas-area").get(0);
+        UI.initGL(canvas);
+        UI.initShaders();
+        UI.initBuffers();
+        
+    });
+  </script>
+
+</head>
+
+<body>
+  <canvas id="canvas-area" height="500" width="500"></canvas>
+</body>
+

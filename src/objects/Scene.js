@@ -46,6 +46,6 @@ Scene.prototype = {
 		}
 	};
 	
-}
+};
 
 

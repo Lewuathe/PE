@@ -42,7 +42,7 @@ Scene.prototype = {
 			var timestep = getTimestep();
 			this.step(timestep); // undifined
 			this.draw(); // undifined	
-			this.time =  + timestep;	
+			this.time += timestep;	
 		}
 	};
 	

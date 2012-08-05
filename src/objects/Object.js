@@ -60,19 +60,11 @@ var Rigidbody = function(_material, _shape) {
 	// public 
 	this.variable = new Variable();
 	this.dynamicsOn = true;
-	// private
-	//
-	var material = _material;
-	var shape = _shape;
-	var mass = material.density * shape.calcVolume();
-	var inertia = shape.calcInertia(mass);
-	var reflection = material.reflection;
-	// get private paramaters
-	this.getMaterial = function(){ return material; };
-	this.getShape = function(){ return shape; };
-	this.getMass = function(){ return mass; };
-	this.getInertia = function(){ return inertia; };
-	this.getReflection = function(){ return reflection; };
+	this.material = _material;
+	this.shape = _shape;
+	this.mass = material.density * shape.calcVolume();
+	this.inertia = shape.calcInertia(mass);
+	this.reflection = material.reflection;
 };
 
 Rigidbody.prototype = {

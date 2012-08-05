@@ -1,5 +1,5 @@
 /* 
- Every objects is a array of rijit bodies in a scene.
+ Every objects is a array of rigit bodies in a scene.
  Each rijid body has infomation of its material, shape and physics.
  Createshape functions make certain shaped rejid body and push it objects.
 */

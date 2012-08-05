@@ -10,25 +10,22 @@ var Scene = function(){
 	this.time = 0.0;
 	this.gravityOn = true;
 	this.timerOn = false;
-	// private
-	var timestep = 0.1;
-	var gravity = -9.8;
-	// get private paramaters
-	this.getTimestep = function(){ return timestep; };
-	this.getGravity = function(){return gravity; };
-	this.setTimestep = function(_timestep){ timestep = _timestep; };
-	this.setGravity = function(_gravity){ gravity = _gravity; };
+	this.timestep = 0.1;
+	this.gravity = -9.8;
 };
 
 Scene.prototype = {
 	createSpere : function(_material, _sphereif){
-		var rjd = new Rijidbody(_material, _sphereif);
-		this.rijidbodys.push(rjd);
+		var rgd = new Rijidbody(_material, _sphereif);
+		this.rijidbodys.push(rgd);
 	};
 	gravityEnable : function(){ this.gravityOn = true; };
        gravityDisable : function(){ this.gravityOn = false; };
 	  timerSwitch : function(){ this.timerOn = !this.timerOn; };
-	
+	  getTimestep : function(){ return timestep; };
+	   getGravity : function(){ return gravity; };
+	  setTimestep : function(_timestep){ timestep = _timestep; };
+	   setGravity : function(_gravity){ gravity = _gravity; };
 	step() : function(timestep){
 		/// hogehoge ///
 	};

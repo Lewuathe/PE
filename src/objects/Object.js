@@ -49,14 +49,14 @@ var Sponge = function(color){
 
 var Variable = function() { 
 	this.pos = {x:0.0, y:0.0, z:0.0};
-	this.pose = {px:0.0, py:0.0, pz:0.0};
-	this.vel = {vx:0.0, vy:0.0, vz:0.0};
-	this.ang_vel = {wx:0.0, wy:0.0, wz:0.0};
-	this.force = {fx:0.0, fy:0.0, fz:0.0};
-	this.torque = {tx:0.0, ty:0.0, tz:0.0};
+	this.pose = {x:0.0, y:0.0, z:0.0};
+	this.vel = {x:0.0, y:0.0, z:0.0};
+	this.ang_vel = {x:0.0, y:0.0, z:0.0};
+	this.force = {x:0.0, y:0.0, z:0.0};
+	this.torque = {x:0.0, y:0.0, z:0.0};
 };
 
-var Rijidbody = function(_material, _shape) {
+var Rigidbody = function(_material, _shape) {
 	// public 
 	this.variable = new Variable();
 	this.dynamicsOn = true;
@@ -75,7 +75,7 @@ var Rijidbody = function(_material, _shape) {
 	this.getReflection = function(){ return reflection; };
 };
 
-Rijidbody.prototype = {
+Rigidbody.prototype = {
 	// get variables
 	getPosition : function(){ return this.variable.pos; };
 	    getPose : function() { return this.variable.pose; };

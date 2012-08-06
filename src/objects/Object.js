@@ -25,7 +25,7 @@ SphereIf.prototype = {
 
 /*
  Material for PE
- Material has basic information of rijid bodies in a scene.
+ Material has basic information of rigid bodies in a scene.
 */
 
 var Material = function(density, reflection, color){
@@ -57,7 +57,7 @@ var Variable = function() {
 	this.torque = {tx:0.0, ty:0.0, tz:0.0};
 };
 
-var Rijidbody = function(_material, _shape) {
+var Rigidbody = function(_material, _shape) {
 	// public 
 	this.variable = new Variable();
 	this.dynamicsOn = true;
@@ -76,7 +76,7 @@ var Rijidbody = function(_material, _shape) {
 	this.getReflection = function(){ return reflection; };
 };
 
-Rijidbody.prototype = {
+Rigidbody.prototype = {
 	// get variables
 	getPosition : function(){ return this.variable.pos; };
 	    getPose : function() { return this.variable.pose; };

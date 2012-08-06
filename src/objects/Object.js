@@ -22,6 +22,7 @@ SphereIf.prototype = {
 	
 };
 
+
 /*
  Material for PE
  Material has basic information of rijid bodies in a scene.

@@ -6,7 +6,7 @@
 
 var Scene = function(){
 	// public
-	this.rijidbodys = [];
+	this.rigidbodys = [];
 	this.time = 0.0;
 	this.gravityOn = true;
 	this.timerOn = false;
@@ -21,9 +21,9 @@ var Scene = function(){
 };
 
 Scene.prototype = {
-	createSpere : function(_material, _sphereif){
+	createSphere : function(_material, _sphereif){
 		var rjd = new Rijidbody(_material, _sphereif);
-		this.rijidbodys.push(rjd);
+		this.rigidbodys.push(rgd);
 	};
 	gravityEnable : function(){ this.gravityOn = true; };
        gravityDisable : function(){ this.gravityOn = false; };

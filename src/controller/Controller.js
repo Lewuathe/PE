@@ -1,35 +1,36 @@
 var Controller = function(){
 	this.scene = new Scene();
 	this.state = new State();
+	this.timestep = 0.1;
 };
 
 Controller.prototype = {
-	createSpere : function(_material, _sphereif){
+	createSphere : function(_material, _sphereif){
 		var rgd = new Rijidbody(_material, _sphereif);
 		this.scene.rijidbodys.push(rgd);
-		this.calcState(rgd);
-	},
-	
-	calcState : function(rgd){
-		this.state.rijidbodys.push(rgd,this.scene.timestep);
+		this.state.rijidbodys.push(rgd,this.timestep);
 	},
 	
 	gravityEnable : function(){ this.scene.gravityOn = true; };
        gravityDisable : function(){ this.scene.gravityOn = false; };
 	  timerSwitch : function(){ this.scene.timerOn = !this.timerOn; };
-	  getTimestep : function(){ return this.scene.timestep; };
+	  getTimestep : function(){ return this.timestep; };
 	   getGravity : function(){ return gravity; };
 	  setTimestep : function(_timestep){ this.scene.timestep = _timestep; };
 	   setGravity : function(_gravity){ this.scene.gravity = _gravity; };
 	step() : function(timestep){
-		
+		//ToDo
+		//Call solver function
+		//Stateとtimestepを用いてPhysicsから使うメソッドを呼び出して
+		//Solverに渡してあげる
 	},
 	draw() : function(){
-		/// hogehoge ///
+		//ToDo
+		//UI側でビュー表示できるように呼ぶ
 	};
 	
 	timerFunc() : function(){ 
-		if(!this.timerOn){ return; };	
+		if(!this.timerOn){ return; };
 		else{
 			var timestep = getTimestep();
 			this.step(timestep); // undifined

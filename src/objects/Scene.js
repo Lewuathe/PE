@@ -10,6 +10,5 @@ var Scene = function(){
 	this.time = 0.0;
 	this.gravityOn = true;
 	this.timerOn = false;
-	this.timestep = 0.1;
 	this.gravity = -9.8;
 };

@@ -3,29 +3,32 @@
  Collision is rule of dynamics become rigidbodies' collision
 */
 
+// 0->x, 1->y, 2->z
 var Pysics = function(_rgd, _timestep){
 	this.posCoef = function(){
-		return [{scalar:{x:1.0, y:1.0, z:1.0}, var:pos},
-		 	{scalar:{x:_timestep, y:_timestep, z:_timestep}, var:vel}];
-	}();
+		return [{pos:1.0, vel:_timestep}, {pos:1.0, vel:_timestep}, {pos:1.0, vel:_timestep}];
+	};
 	this.velCoef = function() {
 		var fCoef = _timestep / rgd.mass;
-		return [{scalar:{x:1.0, y:1.0, z:1.0}, var:vel},
-		        {scalar:{x:fCoef, y:fCoef, z:fCoef}, var:force}];
-	}();
+		return [{vel:1.0, force:fCoef}, {vel:1.0, force:fCoef}, {vel:1.0, force:fCoef}];
+	};
 	this.poseCoef = function(){
-		return [{scalar:{x:1.0, y:1.0, z:1.0}, var:pose},
-		{scalar:{x:_timestep, y:_timestep, z:_timestep}, var:ang_vel}
-			];
-	}();
+		return [{pose:1.0, ang_vel:_timestep}, {pose:1.0, ang_vel:_timestep}, {pose:1.0, ang_vel:_timestep}];
+	};
 	this.ang_velCoef = function(){
 		var tCoef = _timestep / rgd.inertia;
-		return [{scalar:{x:1.0, y:1.0, z:1.0}, var ang_vel},
-		       {scalar:{x:tCoef, y:tCoef, z:tCoef}, var torque}
-			];
-	};
+		return [{ang_vel:1.0, torque:tCoef} ,{ang_vel:1.0, torque:tCoef} ,{ang_vel:1.0, torque:tCoef}];
+    };
 };
 
-Pysics.prototype = {
-	hoge : function()
+/*
+ * 
+*/
+
+Collision = function(){
+   this. 
+};
+
+Collision.prototype = {
+    
 };

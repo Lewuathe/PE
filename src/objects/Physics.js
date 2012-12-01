@@ -4,7 +4,7 @@
 */
 
 // 0->x, 1->y, 2->z
-var Pysics = function(_rgd, _timestep){
+var Physics = function(_rgd, _timestep){
 	this.posCoef = function(){
 		return [{pos:1.0, vel:_timestep}, {pos:1.0, vel:_timestep}, {pos:1.0, vel:_timestep}];
 	};
